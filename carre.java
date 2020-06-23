@@ -1,27 +1,23 @@
-public class carre 
-{
-     public static void main(String[] args) {
- 
-         // saisir le côté du carré : 
-       cote = Utile.lireReel("Tapez le cote d'un carre ");
-         //Vérifier si l'entrée clavier est valide
-    catch(NumberFormatException ne)
-    {
-    System.out.println("Valeur incorrecte" + ne);
-    System.exit(0); // Sortir dans le programme
-    }
+public class Carre extends Figure{
+	
+	public Carre(double longueur){
 
-       // calculer le périmètre:
-       int  perimetre = 4 * cote ;
-       // calculer la surface :  
-       int  surface = cote * cote ;
-       // calculer la diagonale:
-       int  diagonale= Math.pow(cote,2) + Math.pow(cote,2)
-	   
-       // Afficher les informations du carré :
-	  System.out.println("Pour un carre de cote : " + cote);
-          System.out.println(" - le perimetre : " + perimetre);
-          System.out.println(" - la surface   : " + surface);
-	   
-   }
+	this.longueur=longueur
+
+}
+
+		public double demiPerimetre(){
+                     return this.longueur*2;
+                }
+              
+                public double surface(){
+                  return this.longueur * this.longueur;
+                }
+                public double diagonale(){
+                  return Math.sqrt(Math.pow(this.longueur,2)+Math.pow(this.longueur,2));
+                }
+
+
+
+
 }
